@@ -17,6 +17,12 @@ uvicorn app.main:app --reload
 
 # Run dev server on a specific port
 uvicorn app.main:app --reload --port 8080
+
+# Run all tests
+python3 -m pytest tests -v
+
+# Run a single test
+python3 -m pytest tests/test_todos.py::test_create_todo -v
 ```
 
 Swagger UI is available at `http://127.0.0.1:8000/docs` when the server is running.
